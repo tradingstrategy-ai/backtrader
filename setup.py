@@ -25,7 +25,7 @@ import setuptools
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Get the long description from the relevant file
-with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
+with codecs.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 # Package name
@@ -48,16 +48,17 @@ setuptools.setup(
     # https://packaging.python.org/en/latest/single_source_version.html
     version=__version__,
 
-    description='BackTesting Engine',
+    description='BackTesting Engine (forked)',
     long_description=long_description,
+    long_description_content_type="text/markdown",
 
     # The project's main homepage.
     url=gurl,
     download_url=gdurl,
 
     # Author details
-    author='Daniel Rodriguez',
-    author_email='danjrod@gmail.com',
+    author='Mikko Ohtamaa',
+    author_email='mikko@capitalgram.com',
 
     # Choose your license
     license='GPLv3+',
