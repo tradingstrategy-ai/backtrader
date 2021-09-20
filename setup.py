@@ -2,6 +2,8 @@
 # -*- coding: utf-8; py-indent-offset:4 -*-
 ###############################################################################
 #
+# Copyright (C) 2021 Mikko Ohtamaa
+#
 # Copyright (C) 2015-2020 Daniel Rodriguez
 #
 # This program is free software: you can redistribute it and/or modify
@@ -29,16 +31,10 @@ with codecs.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 # Package name
-pname = 'backtrader'
+pname = 'trading-strategy-backtrader'
 
-# Get the version ... execfile is only on Py2 ... use exec + compile + open
-vname = 'version.py'
-with open(os.path.join(pname, vname)) as f:
-    exec(compile(f.read(), vname, 'exec'))
+__version__ = "0.1"
 
-# Generate links
-gurl = 'https://github.com/mementum/' + pname
-gdurl = gurl + '/tarball/' + __version__
 
 setuptools.setup(
     name=pname,
@@ -53,8 +49,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
 
     # The project's main homepage.
-    url=gurl,
-    download_url=gdurl,
+    url="https://github.com/tradingstrategy-ai/qstrader",
 
     # Author details
     author='Mikko Ohtamaa',
